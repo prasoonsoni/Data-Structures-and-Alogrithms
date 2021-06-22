@@ -1,5 +1,4 @@
-#include <stdio.h >
-#include <conio.h >
+#include <iostream>
 #define max 50
 int main(){
     char stack[100], exp[100];
@@ -8,7 +7,7 @@ int main(){
     printf("\n Enter an infix expression ");
     gets(exp);
     for(i=0;exp[i]!='\0';i++){
-        if (exp[i]=='('||exp[i]=="{"||exp[i]=='['){
+        if (exp[i]=='('||exp[i]=='{'||exp[i]=='['){
             top++;
             stack[top] = exp[i];
         } else if (exp[i]==')') { 

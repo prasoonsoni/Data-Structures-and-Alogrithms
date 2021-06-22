@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
-
 void heapify(int arr[], int n, int i) {
     int smallest = i; 
     int l = 2 * i + 1; 
@@ -33,7 +31,14 @@ void printArray(int arr[], int n) {
 }
 
 int main() {
-    int arr[6] = {4,5,0,1,2,3};
+    int size;
+    cout<<"Enter number of elements : ";
+    cin>>size;
+    int arr[size];
+    for(int i = 0;i<size;i++){
+        cout<<"Enter element "<<" "<<i+1<<endl;
+        cin>>arr[i];
+    }
     int n = sizeof(arr) / sizeof(arr[0]);
     heapSort(arr, n);
     cout << "Sorted array is :" <<endl;
